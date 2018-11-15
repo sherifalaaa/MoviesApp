@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="260dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardview"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        app:cardCornerRadius="8dp"
+        android:elevation="5dp"
+        android:background="@color/layout_background"
+        >
+        
+        <ImageView
+            android:layout_width="260dp"
+            android:layout_height="160dp"
+            android:scaleType="fitXY"
+            android:id="@+id/movie_image"
+            />
+        
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

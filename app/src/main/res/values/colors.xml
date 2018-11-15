@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="view_BG">#f1f5f8</color>
+    <color name="movie_title">#4c4c4c</color>
+    <color name="layout_background">#2b2b2b</color>
+    <color name="toolbar_background">#252525</color>
+    <color name="white">#FFF</color>
+    <color name="line_color">#75d995</color>
+    <color name="recycler_background">#606060</color>
+    <color name="background_transparent">#99000000</color>
+    <color name="sheet_background_transparent">#bf000000</color>
+    <color name="bottom_bacground">#e649c470</color>
+    <color name="transparent_black">#e6000000</color>
+    <color name="season_recyclerview">#5c5c5c</color>
+
+</resources>
+

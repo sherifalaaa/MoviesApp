@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/line_color"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.shikooo.moviesapp.DetailActivity"
+    tools:showIn="@layout/acitivty_detail">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/layout_background"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/movietitle"
+                android:layout_marginLeft="@dimen/layout_margin_left"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:text="@string/name_moive"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:padding="@dimen/padding_layout"
+                />
+
+            <View
+                android:layout_width="280dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/line_color"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_width="170dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/layout_image"
+                    android:scaleType="fitXY"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:paddingTop="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="5dp"
+                        android:text="Time Duration"
+                        android:id="@+id/movie_duration"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textStyle="normal"
+                        android:textSize="15sp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="5dp"
+                        android:id="@+id/movie_Lang"
+                        android:paddingTop="10dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numStars="5"
+                            android:paddingStart="10dp"
+                            android:clickable="false"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:id="@+id/movie_rating"
+                            android:theme="@style/RatingBar" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rating_num"
+                            android:textSize="12sp"
+                            android:layout_marginStart="12dp"
+                            android:textColor="@android:color/white"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginStart="17dp"
+                        android:orientation="horizontal">
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/trailer_button"
+                                android:src="@drawable/play_button"
+                                android:background="@android:color/transparent" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/save_button"
+                                android:layout_marginStart="20dp"
+                                android:src="@drawable/ic_favorite_border_color_34dp"
+                                android:background="@android:color/transparent" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/plot"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                android:text="STORYLINE"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+
+                />
+            <View
+                android:layout_width="32dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/line_color"
+             />
+
+            <com.borjabravo.readmoretextview.ReadMoreTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/plotsynopsis"
+                android:layout_marginStart="20dp"
+                app:trimCollapsedText="show less"
+                app:colorClickableText="@color/line_color"
+                app:trimLength="130"
+                app:trimMode="trimModeLength"
+                app:trimExpandedText="show more"
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/image_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="IMAGES"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+
+                />
+            <View
+                android:layout_width="32dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/line_color"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/images_recyclerview"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="left"
+                android:background="@color/recycler_background"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cast_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="CAST"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+
+                />
+            <View
+                android:layout_width="32dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/line_color"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cast_recyclerview"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@android:color/transparent"
+                android:layout_gravity="left">
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_width="32dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="8dp"
+                android:visibility="invisible"
+                android:layout_marginStart="20dp"
+                android:background="@color/line_color"
+                />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/similar_title"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:text="SIMILAR"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+
+                />
+            <View
+                android:layout_width="32dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/line_color"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:id="@+id/similar_recyclerview"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="40dp"
+                android:background="@color/recycler_background"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="left"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>
